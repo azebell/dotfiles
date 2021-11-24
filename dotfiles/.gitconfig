@@ -1,0 +1,21 @@
+[user]
+	email = averyzebell@gmail.com
+	name = Avery Zebell
+[alias]
+	s = "status"
+
+	# pretty log
+	lg   = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	lga   = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+	lgs  = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat"
+
+	# show how many commits each member has
+	rank = "shortlog -sn --no-merges"
+	
+	# show tracked files
+	stf  = "ls-tree -r HEAD --name-only"
+	# show tracked files all history
+	stfa = "log --pretty=format: --name-only --diff-filter=A"
+
+[push]
+	default = simple
