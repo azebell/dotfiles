@@ -26,5 +26,5 @@ alias adminshell="powershell -Command 'Start-Process PowerShell -Verb RunAs'"
 
 alias tree='find . -not -path "*/\.*" | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"'
 
-cd ~
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 

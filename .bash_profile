@@ -1,4 +1,3 @@
-
 # .bash_profile
 
 # Get the aliases and functions
@@ -14,26 +13,16 @@ PS1="\[\e[1;36m\]\u@\h : \[\e[1;34m\]\w [\[\e[1;33m\]\$(parse_git_branch)\[\e[1;
 
 # setup host specific variables
 THISHOST=$(hostname)
-HOSTCLASS=$(hostname | cut -b -3)
-if [ "$THISHOST" = "panda" ]; then
-	PS1="\e[1;32m\u@\h : \e[1;34m\w [\e[1;33m\$(parse_git_branch)\e[1;34m] \e[0m$ "
+if [ "$THISHOST" = "blackheron" ]; then
+	PS1="\[\e[1;32m\]\u@\h : \[\e[1;34m\]\w [\[\e[1;33m\]\$(parse_git_branch)\[\e[1;34m\]] \[\e[0m\]$ "
+	export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
 if [ "$THISHOST" = "condor" ]; then
 	PS1="\[\e[1;33m\]\u@\h : \[\e[1;34m\]\w [\[\e[1;33m\]\$(parse_git_branch)\[\e[1;34m\]] \[\e[0m\]$ "
 fi
-if [ "$THISHOST" = "grizzly" ]; then
-	export C_INCLUDE_PATH="/usr/local/include"
-	export CPLUS_INCLUDE_PATH="/usr/local/include"
-    export LIBRARY_PATH="/usr/local/lib"
-	export PATH=$PATH:/c/xampp/mysql/bin
-	export PS1="\[\e[1;33m\]\u@\h : \[\e[1;34m\]\w [\[\e[1;33m\]\$(parse_git_branch)\[\e[1;34m\]] \[\e[0m\]$ "
-fi
 if [ "$THISHOST" = "falcon" ]; then
 	export CPLUS_INCLUDE_PATH="/usr/include"
     export LIBRARY_PATH="/usr/lib"
-	PS1="\e[1;33m\u@\h : \e[1;34m\w [\e[1;33m\$(parse_git_branch)\e[1;34m] \e[0m$ "
-fi
-if [ "$THISHOST" = "flounder" ]; then
 	PS1="\e[1;33m\u@\h : \e[1;34m\w [\e[1;33m\$(parse_git_branch)\e[1;34m] \e[0m$ "
 fi
 
