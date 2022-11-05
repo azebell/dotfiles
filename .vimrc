@@ -19,6 +19,7 @@ set colorcolumn=80
 
 " show line numbers
 set number
+set relativenumber
 
 " folding to syntax, no nesting, open by default
 set foldmethod=syntax

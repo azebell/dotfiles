@@ -13,6 +13,7 @@ parse_git_branch() {
 }
 
 alias ls="ls --color=auto"
+alias l1="ls -1"
 alias ll="ls -l --group-directories-first"
 alias llr="ls -l -R --group-directories-first"
 
