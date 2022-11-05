@@ -12,10 +12,10 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
-alias ls="ls --color=auto"
-alias l1="ls -1 --group-directories-first"
-alias ll="ls -l --group-directories-first"
-alias llr="ls -l -R --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
+alias l1="ls -1"
+alias ll="ls -l"
+alias llr="ls -l -R"
 
 alias vimm="vim -O"
 
